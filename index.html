@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>D|G Heating &amp; Air Conditioning — Air Duct &amp; Dryer Vent Cleaning · South Florida</title>
-    <meta name="description" content="Air duct &amp; dryer vent cleaning. Same-day free estimates. Serving Miami-Dade, Broward &amp; Palm Beach. Trusted, certified technicians. Call 305-783-3669.">
-    <meta name="keywords" content="air duct cleaning, dryer vent cleaning, duct cleaning, vent cleaning, ac repair, ac replacement, ac change out, hvac, air handler, condenser, coil cleaning, drain line, ductwork, mold, allergens, tune up, mini split, ductless, heat pump, limpieza de conductos, aire acondicionado, reparacion ac, Miami, Broward, Palm Beach">
+    <title>D|G Heating &amp; Air Conditioning — Air Duct &amp; Dryer Vent Cleaning · Port St. Lucie to Homestead</title>
+    <meta name="description" content="Air duct cleaning from $129, dryer vent cleaning from $89. Same-day free estimates. Serving Port St. Lucie to Homestead — Treasure Coast, Palm Beach, Broward &amp; Miami-Dade. Call 305-783-3669.">
+    <meta name="keywords" content="air duct cleaning, dryer vent cleaning, duct cleaning, vent cleaning, ac repair, ac replacement, ac change out, hvac, air handler, condenser, coil cleaning, drain line, ductwork, mold, allergens, tune up, mini split, ductless, heat pump, limpieza de conductos, aire acondicionado, reparacion ac, Miami, Broward, Palm Beach, Port St. Lucie, Fort Pierce, Stuart, Treasure Coast">
     <link rel="canonical" href="https://acapprovenow.vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #ffffff;
@@ -21,9 +21,10 @@
             --rule: #e0e6ee;
             --primary: #0e2748;
             --primary-d: #08182c;
-            --accent: #14897a;
-            --accent-d: #0e6f63;
-            --accent-soft: #e8f5f2;
+            --accent: #d92323;
+            --accent-d: #b31b1b;
+            --accent-soft: #fdecec;
+            --gold: #ffb020;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -43,8 +44,8 @@
         .topbar { background: var(--primary); color: #c8d3e0; padding: 8px 0; font-size: 13px; }
         .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
         .topbar a { color: #fff; font-weight: 700; text-decoration: none; }
-        .topbar a:hover { color: var(--accent); }
-        .topbar .dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+        .topbar a:hover { color: var(--gold); }
+        .topbar .dot { display: inline-block; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; margin-right: 6px; vertical-align: middle; }
         @media (max-width: 540px) { .topbar .row { justify-content: center; text-align: center; } .topbar .hide-sm { display: none; } }
 
         /* Nav */
@@ -97,18 +98,12 @@
         /* Hero */
         section.hero {
             position: relative;
-            background: linear-gradient(135deg, #08182c 0%, #0e2748 55%, #133b5c 100%);
+            background:
+                linear-gradient(100deg, rgba(8,24,44,.95) 0%, rgba(11,31,58,.90) 45%, rgba(14,39,72,.72) 100%),
+                url('hero-tech.jpg') center 30% / cover no-repeat;
             color: #fff;
             padding: 64px 0 80px;
             overflow: hidden;
-        }
-        section.hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle at 20% 20%, rgba(20,137,122,.15), transparent 55%),
-                              radial-gradient(circle at 80% 80%, rgba(20,137,122,.10), transparent 50%);
-            pointer-events: none;
         }
         .hero-grid {
             position: relative;
@@ -125,11 +120,11 @@
             font-weight: 700;
             letter-spacing: .1em;
             text-transform: uppercase;
-            color: #a6e0d4;
+            color: var(--gold);
             margin-bottom: 18px;
             padding: 6px 12px;
-            background: rgba(20,137,122,.15);
-            border: 1px solid rgba(166,224,212,.25);
+            background: rgba(255,176,32,.14);
+            border: 1px solid rgba(255,176,32,.35);
             border-radius: 999px;
         }
         h1.title {
@@ -139,7 +134,7 @@
             letter-spacing: -.025em;
             margin-bottom: 18px;
         }
-        h1.title .em { color: #66d9c8; }
+        h1.title .em { color: var(--gold); }
         p.sub {
             font-size: clamp(16px, 1.35vw, 19px);
             color: #c8d3e0;
@@ -159,7 +154,7 @@
             position: absolute;
             left: 0;
             top: 5px;
-            color: #66d9c8;
+            color: var(--gold);
             font-weight: 800;
             font-size: 16px;
         }
@@ -177,6 +172,7 @@
             border-radius: 10px;
             transition: background 150ms, transform 150ms;
             font-variant-numeric: tabular-nums;
+            box-shadow: 0 6px 24px rgba(217,35,35,.35);
         }
         .btn-call:hover { background: var(--accent-d); transform: translateY(-1px); }
         .btn-call svg { width: 20px; height: 20px; fill: currentColor; }
@@ -242,7 +238,7 @@
         .form-field textarea:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(20,137,122,.15);
+            box-shadow: 0 0 0 3px rgba(217,35,35,.15);
         }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
@@ -308,6 +304,69 @@
             line-height: 1.6;
         }
 
+        /* Offers / specials band */
+        section.offers { background: #fff; padding: 44px 0 36px; border-bottom: 1px solid var(--rule); }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        @media (max-width: 860px) { .offers-grid { grid-template-columns: 1fr; } }
+        .offer-card {
+            position: relative;
+            border: 2px dashed var(--accent);
+            border-radius: 14px;
+            padding: 24px 22px 20px;
+            background: #fffdfb;
+            text-align: center;
+        }
+        .offer-card .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: #4a2f00;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .offer-card .price {
+            font-size: 40px;
+            font-weight: 900;
+            letter-spacing: -.03em;
+            color: var(--accent);
+            line-height: 1;
+            margin: 10px 0 4px;
+            font-variant-numeric: tabular-nums;
+        }
+        .offer-card .price small { font-size: 16px; font-weight: 700; color: var(--muted); letter-spacing: 0; }
+        .offer-card h3 { font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+        .offer-card .desc { font-size: 13.5px; color: var(--muted); margin: 6px 0 14px; line-height: 1.5; }
+        .offer-card .claim {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background 150ms;
+            font-variant-numeric: tabular-nums;
+        }
+        .offer-card .claim:hover { background: var(--accent-d); }
+        .offers-terms {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 18px;
+        }
+
         /* Why-now callout (dust + fire hazard) */
         section.why-now { background: var(--soft); }
         .why-grid {
@@ -336,7 +395,7 @@
             font-weight: 700;
             letter-spacing: .1em;
             text-transform: uppercase;
-            color: var(--accent);
+            color: var(--accent-d);
             background: var(--accent-soft);
             padding: 4px 10px;
             border-radius: 999px;
@@ -416,10 +475,9 @@
         section.area { background: var(--softer); }
         .counties {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
         }
-        @media (max-width: 800px) { .counties { grid-template-columns: 1fr; } }
         .county {
             background: #fff;
             border: 1px solid var(--rule);
@@ -535,7 +593,7 @@
             margin-bottom: 12px;
         }
         footer a { color: #94a3b8; text-decoration: none; display: block; padding: 3px 0; }
-        footer a:hover { color: var(--accent); }
+        footer a:hover { color: var(--gold); }
         footer .brand-line {
             color: #fff;
             font-size: 20px;
@@ -587,8 +645,8 @@
     <!-- Top bar -->
     <div class="topbar">
         <div class="wrap row">
-            <span><span class="dot"></span>Same-Day Service · Free Onsite Estimates</span>
-            <span class="hide-sm">Miami-Dade · Broward · Palm Beach · <a href="tel:+13057833669">☎️ 305-783-3669</a></span>
+            <span><span class="dot"></span>Same-Day Service · Free Onsite Estimates · Licensed &amp; Insured</span>
+            <span class="hide-sm">Port St. Lucie to Homestead · <a href="tel:+13057833669">☎️ 305-783-3669</a></span>
         </div>
     </div>
 
@@ -600,6 +658,7 @@
                 <small>Cooling · Heating · Air Quality</small>
             </a>
             <div class="navlinks">
+                <a href="#specials" class="menu">Specials</a>
                 <a href="#services" class="menu">Services</a>
                 <a href="#area" class="menu">Service Area</a>
                 <a href="#faq" class="menu">FAQ</a>
@@ -622,9 +681,9 @@
                     <ul class="checks">
                         <li>Same-day service</li>
                         <li>Free onsite estimates</li>
-                        <li>Trusted, certified technicians</li>
+                        <li>Licensed &amp; insured, certified technicians</li>
                         <li>Straight pricing before we start, not after</li>
-                        <li>Serving Miami-Dade, Broward &amp; Palm Beach</li>
+                        <li>Serving Port St. Lucie to Homestead</li>
                     </ul>
                     <div class="hero-cta-row">
                         <a href="tel:+13057833669" class="btn-call">
@@ -681,13 +740,44 @@
         </div>
     </section>
 
+    <!-- Specials / offers band -->
+    <!-- TODO(chris): CONFIRM these special prices with D|G before sending any traffic. -->
+    <section class="offers" id="specials">
+        <div class="wrap">
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <span class="badge">Most Popular</span>
+                    <h3>Whole-Home Air Duct Cleaning</h3>
+                    <div class="price"><small>from</small> $129</div>
+                    <p class="desc">Every supply &amp; return register in the house — dust, dander &amp; debris out.</p>
+                    <a href="tel:+13057833669" class="claim">☎️ Call to Claim</a>
+                </div>
+                <div class="offer-card">
+                    <span class="badge">Fire Safety</span>
+                    <h3>Dryer Vent Cleaning</h3>
+                    <div class="price"><small>from</small> $89</div>
+                    <p class="desc">Full lint removal plus an airflow test before we leave. Faster, safer drying.</p>
+                    <a href="tel:+13057833669" class="claim">☎️ Call to Claim</a>
+                </div>
+                <div class="offer-card">
+                    <span class="badge">New System</span>
+                    <h3>AC Change-Out Quote</h3>
+                    <div class="price">FREE</div>
+                    <p class="desc">Same-day onsite quote on a full system replacement. Honest pricing, no pressure.</p>
+                    <a href="tel:+13057833669" class="claim">☎️ Call to Claim</a>
+                </div>
+            </div>
+            <p class="offers-terms">Final price confirmed onsite before any work starts — no surprise add-ons. Specials vary with home size and system condition.</p>
+        </div>
+    </section>
+
     <!-- Trust bar -->
     <div class="trust-bar">
         <div class="wrap row">
             <div class="stat"><span class="num">Same</span><span class="label">Day Service</span></div>
             <div class="stat"><span class="num">Free</span><span class="label">Onsite Estimates</span></div>
             <div class="stat"><span class="num">Certified</span><span class="label">Technicians</span></div>
-            <div class="stat"><span class="num">3</span><span class="label">Counties Served</span></div>
+            <div class="stat"><span class="num">5</span><span class="label">Counties Served</span></div>
         </div>
     </div>
 
@@ -754,6 +844,25 @@
         </div>
     </section>
 
+    <!--
+    REVIEWS — STUBBED, DO NOT PUBLISH WITH FAKE QUOTES.
+    D|G has no Google/Yelp presence yet. When real customer quotes exist
+    (from their Google Business Profile once claimed, or texted-in customer
+    feedback), drop 3 of them in below and uncomment this section.
+
+    <section class="pad" id="reviews" style="background:var(--soft);">
+        <div class="wrap">
+            <div class="eyebrow">Reviews</div>
+            <h2 class="section-title">What homeowners say</h2>
+            <div class="why-grid">
+                <div class="why-card"><p>"REAL QUOTE 1"</p><p style="margin-top:10px;font-weight:700;">— Name, City</p></div>
+                <div class="why-card"><p>"REAL QUOTE 2"</p><p style="margin-top:10px;font-weight:700;">— Name, City</p></div>
+                <div class="why-card"><p>"REAL QUOTE 3"</p><p style="margin-top:10px;font-weight:700;">— Name, City</p></div>
+            </div>
+        </div>
+    </section>
+    -->
+
     <!-- Spanish -->
     <section class="espanol">
         <div class="wrap">
@@ -767,21 +876,25 @@
     <section class="pad area" id="area">
         <div class="wrap">
             <div class="eyebrow">Service area</div>
-            <h2 class="section-title">South Florida tri-county</h2>
-            <p class="section-sub">If you're in Miami-Dade, Broward or Palm Beach — we've got you. Call and we'll confirm coverage on your ZIP.</p>
+            <h2 class="section-title">Port St. Lucie to Homestead</h2>
+            <p class="section-sub">Treasure Coast down through Palm Beach, Broward and Miami-Dade. Call and we'll confirm coverage on your ZIP.</p>
 
             <div class="counties">
                 <div class="county">
-                    <h3>Miami-Dade</h3>
-                    <p>Aventura · Bal Harbour · Coral Gables · Cutler Bay · Doral · Hialeah · Homestead · Kendall · Key Biscayne · Miami · Miami Beach · Miami Gardens · Miami Lakes · North Miami · Palmetto Bay · Pinecrest · Sunny Isles Beach · Surfside · and every ZIP in between.</p>
+                    <h3>Treasure Coast</h3>
+                    <p>Port St. Lucie · Fort Pierce · Stuart · Palm City · Jensen Beach · Hobe Sound · Okeechobee Rd corridor · and surrounding St. Lucie &amp; Martin County areas.</p>
+                </div>
+                <div class="county">
+                    <h3>Palm Beach</h3>
+                    <p>Boca Raton · Boynton Beach · Delray Beach · Greenacres · Jupiter · Lake Worth Beach · Palm Beach · Palm Beach Gardens · Riviera Beach · Royal Palm Beach · Wellington · West Palm Beach · and the surrounding areas.</p>
                 </div>
                 <div class="county">
                     <h3>Broward</h3>
                     <p>Coral Springs · Davie · Deerfield Beach · Fort Lauderdale · Hallandale Beach · Hollywood · Miramar · Parkland · Pembroke Pines · Plantation · Pompano Beach · Sunrise · Tamarac · Weston · Wilton Manors · and everywhere in the county.</p>
                 </div>
                 <div class="county">
-                    <h3>Palm Beach</h3>
-                    <p>Boca Raton · Boynton Beach · Delray Beach · Greenacres · Jupiter · Lake Worth Beach · Palm Beach · Palm Beach Gardens · Riviera Beach · Royal Palm Beach · Wellington · West Palm Beach · and the surrounding areas.</p>
+                    <h3>Miami-Dade</h3>
+                    <p>Aventura · Bal Harbour · Coral Gables · Cutler Bay · Doral · Hialeah · Homestead · Kendall · Key Biscayne · Miami · Miami Beach · Miami Gardens · Miami Lakes · North Miami · Palmetto Bay · Pinecrest · Sunny Isles Beach · Surfside · and every ZIP in between.</p>
                 </div>
             </div>
         </div>
@@ -824,9 +937,9 @@
     <section class="pad final-cta">
         <div class="wrap">
             <h2>Call now for same-day service</h2>
-            <p>Free onsite estimate. Straight pricing. Miami-Dade, Broward &amp; Palm Beach.</p>
+            <p>Free onsite estimate. Straight pricing. Port St. Lucie to Homestead.</p>
             <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-                <a href="tel:+13057833669" class="btn-call" style="background:var(--accent);">
+                <a href="tel:+13057833669" class="btn-call">
                     <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                     Call 305-783-3669
                 </a>
@@ -841,7 +954,7 @@
             <div class="cols">
                 <div>
                     <div class="brand-line">D<span class="a">|</span>G Heating &amp; Air Conditioning</div>
-                    <p style="max-width:400px;line-height:1.55;">South Florida's straight-shooting HVAC crew. Air duct &amp; dryer vent cleaning, ductwork, AC change-outs and tune-ups. Serving Miami-Dade, Broward &amp; Palm Beach.</p>
+                    <p style="max-width:400px;line-height:1.55;">South Florida's straight-shooting HVAC crew. Air duct &amp; dryer vent cleaning, ductwork, AC change-outs and tune-ups. Serving Port St. Lucie to Homestead.</p>
                     <div style="margin-top:18px;">
                         <a href="tel:+13057833669" class="phone-big">☎️ 305-783-3669</a>
                     </div>
@@ -856,15 +969,17 @@
                 </div>
                 <div>
                     <h4>Coverage</h4>
-                    <a href="#area">Miami-Dade</a>
-                    <a href="#area">Broward</a>
+                    <a href="#area">Treasure Coast</a>
                     <a href="#area">Palm Beach</a>
+                    <a href="#area">Broward</a>
+                    <a href="#area">Miami-Dade</a>
                     <a href="#faq">FAQ</a>
                     <a href="tel:+13057833669">Call Us</a>
                 </div>
             </div>
             <div class="legal">
-                © 2026 D|G Heating &amp; Air Conditioning. Heating, cooling and air quality only — we do not service appliances. Se habla español.
+                <!-- TODO(chris): insert D|G's real FL license number here, e.g. "FL Lic #CAC1XXXXXX" — required by FS 489.119 before running traffic -->
+                © 2026 D|G Heating &amp; Air Conditioning. Licensed &amp; Insured. Heating, cooling and air quality only — we do not service appliances. Se habla español.
             </div>
         </div>
     </footer>
