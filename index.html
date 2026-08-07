@@ -10,6 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 — property 549060302 (ssaff account 389166335) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSY1HJY83T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SSY1HJY83T');
+    </script>
     <style>
         :root {
             --bg: #ffffff;
@@ -993,10 +1002,38 @@
             const form = e.target;
             const data = Object.fromEntries(new FormData(form));
             console.log('Lead:', data);
+            // GA4 conversion event
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    service: data.service || '',
+                    zip: data.zip || '',
+                    urgency: data.urgency || '',
+                    value: 1
+                });
+            }
             document.querySelector('.form-wrap').classList.add('hide');
             document.getElementById('form-success').classList.add('show');
             document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+
+        // Track every tap on the phone number (top bar, nav, hero, final CTA, sticky)
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'call_click', {
+                            phone: this.getAttribute('href').replace('tel:',''),
+                            location: this.closest('nav.site') ? 'nav'
+                                    : this.closest('.topbar') ? 'topbar'
+                                    : this.closest('section.hero') ? 'hero'
+                                    : this.closest('section.final-cta') ? 'final_cta'
+                                    : this.classList.contains('sticky-cta') ? 'sticky_mobile'
+                                    : 'other'
+                        });
+                    }
+                });
+            });
+        });
     </script>
 
 </body>
